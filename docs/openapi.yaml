@@ -13,7 +13,8 @@ tags:
     description: Auth operations.
 servers:
   - url: http://localhost:3000
-  # - url: #посилання на задеплоєний сайт
+  - url: https://node-js-hw7-swagger-6hn4.onrender.com
+
 paths:
   /contacts/{contactId}:
     get:
