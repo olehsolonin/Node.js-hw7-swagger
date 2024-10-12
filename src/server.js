@@ -7,6 +7,7 @@ import errorHandler from './middlewares/errorHandler.js';
 import logger from './middlewares/logger.js';
 import authRouter from './routers/auth.js';
 import cookieParser from "cookie-parser";
+import { swaggerDocs } from "./middlewares/swaggerDocs.js";
 
 
 
@@ -19,6 +20,7 @@ export const startServer = () => {
 	app.use(cors()); // корототкий запис створення і використання мідлвару CORS
 	app.use(express.json());
 	app.use(cookieParser());
+	app.use('/api-docs', swaggerDocs);
 	app.use(express.static("uploads"));
 
 
